@@ -26,7 +26,7 @@
   "homepage": "https://github.com/bolaxd/bot-read-sw#readme",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
-    "baileys": "npm:@whiskeysockets/baileys@^6.6.0",
+    "baileys": "npm:@whiskeysockets/baileys@^6.7.5",
     "cfonts": "^3.2.0",
     "chalk": "^5.3.0",
     "express": "^4.19.2",
