@@ -60,7 +60,7 @@ const start = async () => {
 		const { state, saveCreds } = await useMultiFileAuthState('WilyKun');
 		const msgRetryCounterCache = new NodeCache()
 		const config = {
-			browser: ['Dx', 'Chrome', ''],
+			browser: ['Linux', 'Chrome', ''],
             version: [2, 2412, 78],
             pairingCode: true, 
             markOnlineOnConnect: false,
