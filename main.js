@@ -1,4 +1,4 @@
-
+process.on('uncaughtException', console.error);
 const { default: KUNTUL, useMultiFileAuthState, PHONENUMBER_MCC, DisconnectReason, makeInMemoryStore, getContentType } = (await import('baileys')).default;
 import { Boom } from '@hapi/boom';
 import p from 'pino';
@@ -61,7 +61,7 @@ const start = async () => {
 		const msgRetryCounterCache = new NodeCache()
 		const config = {
 			browser: ['Linux', 'Chrome', ''],
-            version: [2, 2412, 78],
+            version: [2, 2413, 51],
             pairingCode: true, 
             markOnlineOnConnect: false,
 			logger: log,
