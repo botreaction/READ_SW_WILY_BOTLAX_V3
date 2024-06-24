@@ -1,4 +1,4 @@
-process.on('uncaughtException', console.error);
+
 const { default: KUNTUL, useMultiFileAuthState, PHONENUMBER_MCC, DisconnectReason, makeInMemoryStore, getContentType } = (await import('baileys')).default;
 import { Boom } from '@hapi/boom';
 import p from 'pino';
