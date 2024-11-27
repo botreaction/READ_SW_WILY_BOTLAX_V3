@@ -1,16 +1,23 @@
-FROM node:lts-buster
+FROM node:18
 
-RUN apt-get update && \
-  apt-get install -y \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+# Set working directory
+WORKDIR /usr/src/app
 
-COPY package.json .
-
+# Copy package files and install dependencies
+COPY package.json ./
 RUN npm install
 
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y ffmpeg imagemagick webp && \
+    apt-get upgrade -y && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy the rest of the application files
 COPY . .
 
-EXPOSE 5000
+# Expose the required port
+EXPOSE 3000
 
-CMD ["node", "main.js"]
+# Command to run the application
+CMD ["node", "index.js"]
